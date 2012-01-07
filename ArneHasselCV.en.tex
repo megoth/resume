@@ -1,0 +1,162 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+% (c) 2012 Arne Hassel <arne.hassel@gmail.com> http://megoth.wordpress.com/
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt,english]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{babel}
+\usepackage[T1]{fontenc}
+\usepackage{framed}
+\usepackage[utf8]{inputenc}
+\usepackage{tocloft}
+\usepackage{url}
+\usepackage[svgnames]{xcolor}
+
+%-----------------------------------------------------------
+
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{-0.25in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.75in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+%Custom commands
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+\title{Curriculum Vitae}
+
+\begin{document}
+
+\maketitle
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Arne Hassel} & \textbf{arne.hassel@gmail.com} \\
+Master in Computer Science, University of Oslo & arnehass@ifi.uio.no \\
+Rosenborggata 15c, 0356 Oslo & 416 94 086 \\
+Born: December 5th 1984 & Marital status: Unmarried \\
+\url{linkedin.com/in/arnehassel} & \url{twitter.com/megoth} \\
+\end{tabular*}
+
+\resheading{Education}
+\begin{itemize}
+\item
+	\ressubheading{Department of informatics, University of Oslo}{Oslo, Norway}{Master in Computer Science (current)}{2007 - 2012 (estimated)}
+	\begin{itemize}
+		\resitem{Working on my master thesis on Javascript and Semantic Web}
+	\end{itemize}
+\item
+	\ressubheading{Norwegian University of Life Sciences}{Ås, Norway}{Bachelor in Economics and Administration}{2003 - 2007}
+\item
+	\ressubheading{Risør VGS}{Risør, Norway}{General studies}{2000 - 2003}
+\end{itemize}
+
+\resheading{Skills}
+
+\begin{itemize}
+\item {\bf Development:} {\bf (Very good:)} CSS, HTML, Javascript, LESS, Sass, SQL, {\bf (Good:)} C\#, Java, PHP, Python, RDF, SPARQL, TTL, XML, XSLT, {\bf (Average:)} Assembly, C
+\item {\bf Frameworks:} Compass, Django, .NET MVC 2 \& 3, Umbraco, Wordpress
+\item {\bf Computer science:} Databases, semantic technologies, system development, algorithms, data structures, qualitative research, modeling, computer architecture, \LaTeX, design patterns
+\item {\bf Administration:} Organizational analysis, SWOT-analysis, risk analysis
+\item {\bf Economics:} Accounting, budgets, journaling, macro- \& microeconomics
+\item {\bf Language:} Norwegian (native tongue), english (fluent), german (beginner)
+\end{itemize}
+
+\resheading{Work Experience}
+
+\begin{itemize}
+\item
+	\ressubheading{Centre for Shared Decision making and Collaborative Care Research}{Oslo, Norway}{System Developer}{2008 August - current}
+	\begin{itemize}
+		\resitem{Work mostly frontend (HTML, CSS og Javascript),  but also some backend (.NET framework)}
+	\end{itemize}
+\item
+	\ressubheading{LUMA Production AS}{Oslo, Norway}{Mall Santa}{2011 December}
+	\begin{itemize}
+		\resitem{Worked as Mall Sanata at Storo storsenter.}
+	\end{itemize}
+\item
+	\ressubheading{Senter for Helse \& Arbeid}{Oslo, Norway}{Personal assistant}{2008 March - 2008 June}
+\item
+	\ressubheading{Kiwi}{Risør \& Oslo, Norway}{Part-time worker, first in Risør until 2007, then in Sandakerveien, Oslo}{1999 - 2008 March}
+\item
+	\ressubheading{Risør SFO}{Risør, Norway}{Substitute}{2007 January - 2007 May}
+\end{itemize}
+
+\resheading{Voluntary Work and Honorary Positions}
+
+\begin{itemize}
+\item
+	\ressubheading{Cybernetic Society (CYB)}{Oslo, Norway}{Treasurer, Member of the Sponsor Board, Guard}{2009 August - current}
+	\begin{itemize}
+		\resitem{Elected as Treasurer fall 2009 until spring 2011, now a resource person for the finance group.}
+		\resitem{Helped stabilize the finances for CYB, so that the association could rise to become Institute Association, start maintaining a student pub, and become the largest association at the department.}
+		\resitem{Administrated the work to publish Ifi-blekka 2011, an annual publication for the new students starting each fall.}
+	\end{itemize}
+\item
+	\ressubheading{Birthday Party at Ole-Johan Dahls hus September 2nd}{Oslo, Norway}{Party General/Coordinator}{2011}
+	\begin{itemize}
+		\resitem{Planned, executed and completed the follow-up associated with the Birthday Party in the occasion of the 200-year celebration of University of Oslo.}
+		\resitem{Cooperated with the department and UiO:200, the Anniversary Secreatariat, and executed a party for almost 5 000 people.}
+	\end{itemize}
+\item
+	\ressubheading{IAESTE Ås}{Ås, Norway}{Leader, Treasurerer, Vice Leader, Computer Manager}{2003 August - 2007 June}
+\item
+	\ressubheading{IAESTE Norway}{Norway}{Computer Manager}{2005 - 2006}
+\item
+	\ressubheading{UKA i Ås 2004, 2006}{Ås, Norway}{Guard, Webmaster}{2004, 2006 October}
+\end{itemize}
+
+\resheading{Personal details}
+
+\begin{itemize}
+\item Consider myself a responsible and open person that enjoys social work, taking on challenges and a fond user of Ockham's razor. I enjoy working with like-minded, but have no problem cooperating with people of other opinions and views.
+\item {\bf Hobbies:} Read, learn new stuff, build/create stuff (have a nostalgic feeling toward Lego), games (be it digital, boards, cards, or roleplaying-game), and spending time with friends.
+\end{itemize}
+
+\resheading{References}
+
+I will submit a list of my references if this would be appropriate.
+
+\end{document}
