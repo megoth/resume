@@ -12,12 +12,15 @@
 \raggedbottom
 \raggedright
 \usepackage{babel}
+\usepackage{float}
 \usepackage[T1]{fontenc}
 \usepackage{framed}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{tocloft}
 \usepackage{url}
 \usepackage[svgnames]{xcolor}
+\usepackage{wrapfig}
 
 %-----------------------------------------------------------
 
@@ -49,6 +52,7 @@
 %Custom commands
 
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
 \newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
@@ -69,39 +73,30 @@
 
 \begin{document}
 
-\maketitle
+\begin{minipage}{\textwidth}
+\begin{wrapfigure}{r}{0pt}
+	\includegraphics[height=45mm]{uio200.jpg}
+\end{wrapfigure}
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Arne Hassel} & \textbf{arne.hassel@gmail.com} \\
-Master in Computer Science, University of Oslo & arnehass@ifi.uio.no \\
-Rosenborggata 15c, 0356 Oslo & 416 94 086 \\
-Born: December 5th 1984 & Marital status: Unmarried \\
-\url{linkedin.com/in/arnehassel} & \url{twitter.com/megoth} \\
-\end{tabular*}
+\textbf{\Large Curriculum Vitae for Arne Hassel}
 
-\resheading{Education}
-\begin{itemize}
-\item
-	\ressubheading{Department of informatics, University of Oslo}{Oslo, Norway}{Master in Computer Science (current)}{2007 - 2012 (estimated)}
-	\begin{itemize}
-		\resitem{Working on my master thesis on Javascript and Semantic Web}
-	\end{itemize}
-\item
-	\ressubheading{Norwegian University of Life Sciences}{Ås, Norway}{Bachelor in Economics and Administration}{2003 - 2007}
-\item
-	\ressubheading{Risør VGS}{Risør, Norway}{General studies}{2000 - 2003}
-\end{itemize}
+\vspace{5mm}
 
-\resheading{Skills}
+\begin{tabular}{p{1in} l}
+Adress: & Rosenborggata 15c, 0356 Oslo, NORWAY\\
+Phone: & (+47) 416 94 086 \\
+Mail: & \url{arne.hassel@gmail.com} \\
+Born: & December 5th 1984 \\
+Marital status: & Unmarried \\
+\end{tabular}
 
-\begin{itemize}
-\item {\bf Development:} {\bf (Very good:)} CSS, HTML, Javascript, LESS, Sass, SQL, {\bf (Good:)} C\#, Java, PHP, Python, RDF, SPARQL, TTL, XML, XSLT, {\bf (Average:)} Assembly, C
-\item {\bf Frameworks:} Compass, Django, .NET MVC 2 \& 3, Umbraco, Wordpress
-\item {\bf Computer science:} Databases, semantic technologies, system development, algorithms, data structures, qualitative research, modeling, computer architecture, \LaTeX, design patterns
-\item {\bf Administration:} Organizational analysis, SWOT-analysis, risk analysis
-\item {\bf Economics:} Accounting, budgets, journaling, macro- \& microeconomics
-\item {\bf Language:} Norwegian (native tongue), english (fluent), german (beginner)
-\end{itemize}
+\vspace{5mm}
+
+\begin{minipage}{5.5in}
+Soon to be graduated master in computer science, focused on webbased solutions. Experienced programmer, solution oriented and quick to learn new technologies and programming languages.
+\end{minipage}
+
+\end{minipage}
 
 \resheading{Work Experience}
 
@@ -112,16 +107,43 @@ Born: December 5th 1984 & Marital status: Unmarried \\
 		\resitem{Work mostly frontend (HTML, CSS og Javascript),  but also some backend (.NET framework)}
 	\end{itemize}
 \item
-	\ressubheading{LUMA Production AS}{Oslo, Norway}{Mall Santa}{2011 December}
-	\begin{itemize}
-		\resitem{Worked as Mall Sanata at Storo storsenter.}
-	\end{itemize}
+	\ressubheading{Kiwi}{Risør \& Oslo, Norway}{Part-time worker}{1999 - 2008}
 \item
 	\ressubheading{Senter for Helse \& Arbeid}{Oslo, Norway}{Personal assistant}{2008 March - 2008 June}
+\end{itemize}
+
+\resheading{Education}
+\begin{itemize}
 \item
-	\ressubheading{Kiwi}{Risør \& Oslo, Norway}{Part-time worker, first in Risør until 2007, then in Sandakerveien, Oslo}{1999 - 2008 March}
+	\ressubheading{Department of informatics, University of Oslo}{Oslo, Norway}{Master in Computer Science: programming and networks (current)}{2007 - 2012 (estimated)}
+	\begin{itemize}
+		\item Working on my master thesis on Javascript and Semantic Web, my supervisors are Kjetil Kjernsmo and Martin Giese
+		\item Programmed a lot in Java and Eclipse
+	\end{itemize}
 \item
-	\ressubheading{Risør SFO}{Risør, Norway}{Substitute}{2007 January - 2007 May}
+	\ressubheading{Norwegian University of Life Sciences}{Ås, Norway}{Bachelor in Economics and Administration}{2003 - 2007}
+\item
+	\ressubheading{Risør VGS}{Risør, Norway}{General studies}{2000 - 2003}
+\end{itemize}
+
+\resheading{Skills}
+
+See attached competence chart for more details.
+
+\begin{itemize}
+\item {\bf Development:} {\bf (Very good:)} CSS, HTML, Javascript, LESS, Sass, SQL, {\bf (Good:)} C\#, Java, PHP, Python, RDF, SPARQL, TTL, XML, XSLT, {\bf (Average:)} Assembly, C
+\item {\bf Frameworks:} Compass, Django, .NET MVC 2 \& 3, Umbraco, Wordpress
+\item {\bf Computer science:} Databases, semantic technologies, system development, algorithms, data structures, qualitative research, modeling, computer architecture, \LaTeX, design patterns
+\item {\bf Administration:} Organizational analysis, SWOT-analysis, risk analysis
+\item {\bf Economics:} Accounting, budgets, journaling, macro- \& microeconomics
+\item {\bf Language:} Norwegian (native tongue), english (fluent), german (beginner)
+\end{itemize}
+
+\resheading{Selected projects}
+
+\begin{itemize}
+\item {\bf CommunicareTools:} Webpage focused on presenting the portfolio of Centre for Shared Decision making and Collaborative Care Research. Developed in .NET with the framework Umbraco. \url{http://communicaretools.org/}
+\item {\bf Zetti:} A system to handle reports produced by Cybernetic Society. Developed in Django and Compass. Under development. \url{https://github.com/megoth/Zetti}
 \end{itemize}
 
 \resheading{Voluntary Work and Honorary Positions}
@@ -141,18 +163,16 @@ Born: December 5th 1984 & Marital status: Unmarried \\
 		\resitem{Cooperated with the department and UiO:200, the Anniversary Secreatariat, and executed a party for almost 5 000 people.}
 	\end{itemize}
 \item
-	\ressubheading{IAESTE Ås}{Ås, Norway}{Leader, Treasurerer, Vice Leader, Computer Manager}{2003 August - 2007 June}
+	\ressubheading{IAESTE}{Ås, Norway}{Computer Manager, Leader, Treasurerer, Vice Leader}{2003 August - 2007 June}
 \item
-	\ressubheading{IAESTE Norway}{Norway}{Computer Manager}{2005 - 2006}
-\item
-	\ressubheading{UKA i Ås 2004, 2006}{Ås, Norway}{Guard, Webmaster}{2004, 2006 October}
+	\ressubheading{UKA i Ås}{Ås, Norway}{Webmaster, Guard}{2004, 2006 October}
 \end{itemize}
 
 \resheading{Personal details}
 
 \begin{itemize}
-\item Consider myself a responsible and open person that enjoys social work, taking on challenges and a fond user of Ockham's razor. I enjoy working with like-minded, but have no problem cooperating with people of other opinions and views.
 \item {\bf Hobbies:} Read, learn new stuff, build/create stuff (have a nostalgic feeling toward Lego), games (be it digital, boards, cards, or roleplaying-game), and spending time with friends.
+\item Have a driver license class B (norwegian)
 \end{itemize}
 
 \resheading{References}
