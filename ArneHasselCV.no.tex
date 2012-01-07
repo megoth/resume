@@ -12,12 +12,15 @@
 \raggedbottom
 \raggedright
 \usepackage{babel}
+\usepackage{float}
 \usepackage[T1]{fontenc}
 \usepackage{framed}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{tocloft}
 \usepackage{url}
 \usepackage[svgnames]{xcolor}
+\usepackage{wrapfig}
 
 %-----------------------------------------------------------
 
@@ -48,7 +51,10 @@
 
 %Custom commands
 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
 \newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
 \newcommand{\resheading}[1]{\vspace{8pt}
   \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
     \begin{shaded}
@@ -69,22 +75,53 @@
 
 \begin{document}
 
-\maketitle
+\begin{minipage}{\textwidth}
+\begin{wrapfigure}{r}{0pt}
+	\includegraphics[height=45mm]{uio200.jpg}
+\end{wrapfigure}
 
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Large Arne Hassel} & \textbf{arne.hassel@gmail.com} \\
-Master i informatikk, Universitetet i Oslo & arnehass@ifi.uio.no \\
-Rosenborggata 15c, 0356 Oslo & 416 94 086 \\
-Født: 5. desember 1984 & Sivil status: Ugift \\
-\url{linkedin.com/in/arnehassel} & \url{twitter.com/megoth} \\
-\end{tabular*}
+\textbf{\Large Curriculum Vitae for Arne Hassel}
 
-\resheading{Utdanning}
+\vspace{5mm}
+
+\begin{tabular}{p{1in} l}
+Adresse: & Rosenborggata 15c, 0356 Oslo\\
+Telefon: & 416 94 086 \\
+E-post: & \url{arne.hassel@gmail.com} \\
+Født: & 5. desember 1984 \\
+Sivilstatus: & Ugift \\
+\end{tabular}
+
+\vspace{5mm}
+
+\begin{minipage}{5.5in}
+Snart nyutdannet master i informatikk, med fokus på nettbaserte løsninger. Erfaren programmerer, løsningsorientert og setter meg raskt inn i ny teknologi og nye programmeringsspråk.
+\end{minipage}
+
+\end{minipage}
+
+\resheading{Arbeidserfaring}
+
 \begin{itemize}
 \item
-	\ressubheading{Institutt for informatikk, Universitetet i Oslo}{Oslo}{Master i informatikk (nåværende)}{2007 - 2012 (estimert)}
+	\ressubheading{Senter for pasientmedvirkning og samhandlingsforskning}{Oslo}{Systemutvikler}{2008 august - nåværende}
 	\begin{itemize}
-		\resitem{Skriver masteroppgave om Javascript og Semantisk Web}
+		\item Jobber for det meste med frontend (HTML, CSS og JavaScript), men har også jobbet en del med backend (.NET-plattformen)
+	\end{itemize}
+\item
+	\ressubheading{Kiwi}{Risør \& Oslo}{Deltidsmedarbeider}{1999 - 2008}
+\item
+	\ressubheading{Senter for Helse \& Arbeid}{Oslo}{Personlig assistent}{2008 mars - 2008 juni}
+\end{itemize}
+
+\resheading{Utdanning}
+
+\begin{itemize}
+\item
+	\ressubheading{Institutt for informatikk, Universitetet i Oslo}{Oslo}{Master i informatikk: programmering og nettverk (nåværende)}{2007 - 2012 (estimert)}
+	\begin{itemize}
+		\item Skriver masteroppgave om JavaScript og Semantisk Web, veiledere er Kjetil Kjernsmo og Martin Giese
+		\item Programmert mye i Java og Eclipse
 	\end{itemize}
 \item
 	\ressubheading{Universitetet for miljø og biovitenskap}{Ås}{Bachelor i økonomi og administrasjon}{2003 - 2007}
@@ -94,8 +131,10 @@ Født: 5. desember 1984 & Sivil status: Ugift \\
 
 \resheading{Ferdigheter}
 
+Se vedlagt kompetansediagram for ytterligere detalj.
+
 \begin{itemize}
-\item {\bf Utvikling:} {\bf (Veldig god:)} CSS, HTML, Javascript, LESS, Sass, SQL, {\bf (God:)} C\#, Java, PHP, Python, RDF, SPARQL, TTL, XML, XSLT, {\bf (Grei:)} Assembly, C
+\item {\bf Utvikling:} {\bf (Veldig god:)} CSS, HTML, JavaScript, LESS, Sass, SQL, {\bf (God:)} C\#, Java, PHP, Python, RDF, SPARQL, TTL, XML, XSLT, {\bf (Grei:)} Assembly, C
 \item {\bf Rammeverk:} Compass, Django, .NET MVC 2 \& 3, Umbraco, Wordpress
 \item {\bf Informatikk:} Databaser, semantiske teknologier, systemutvikling, algoritmer, datastrukturer, kvalitativ forskning, modellering, datamaskinarkitektur, \LaTeX, design patterns
 \item {\bf Administrasjon:} Organisasjonsanalyse, SWOT-analyse, risikoanalyse
@@ -103,25 +142,11 @@ Født: 5. desember 1984 & Sivil status: Ugift \\
 \item {\bf Språk:} Norsk (morsmål), engelsk (flytende), tysk (begynner)
 \end{itemize}
 
-\resheading{Arbeidserfaring}
+\resheading{Utvalgte prosjekt}
 
 \begin{itemize}
-\item
-	\ressubheading{Senter for pasientmedvirkning og samhandlingsforskning}{Oslo}{Systemutvikler}{2008 august - nåværende}
-	\begin{itemize}
-		\resitem{Jobber for det meste med frontend (HTML, CSS og Javascript), men har også jobbet en del med backend (.NET-plattformen)}
-	\end{itemize}
-\item
-	\ressubheading{LUMA Production AS}{Oslo}{Senternisse}{2011 desember}
-	\begin{itemize}
-		\resitem{Jobbet som senternisse på Storo storsenter.}
-	\end{itemize}
-\item
-	\ressubheading{Senter for Helse \& Arbeid}{Oslo}{Personlig assistent}{2008 mars - 2008 juni}
-\item
-	\ressubheading{Kiwi}{Risør \& Oslo}{Deltidsmedarbeider, først Risør til 2007, så i Sandakerveien, Oslo}{1999 - 2008 mars}
-\item
-	\ressubheading{Risør SFO}{Risør}{Vikar}{2007 januar - 2007 mai}
+\item {\bf CommunicareTools:} Nettside med fokus på å presentere program-porteføljen til Senter for pasientmedvirkning og samhandlingsforskning. Utviklet i .NET med rammeverket Umbraco. \url{http://communicaretools.org/}
+\item {\bf Zetti:} Et rapporthåndteringssystem som skal tas i bruk av driften til Cybernetisk Selskab. Utviklet i rammeverket Django og Compass. Under utvikling. \url{https://github.com/megoth/Zetti}
 \end{itemize}
 
 \resheading{Frivillig arbeid og tillitsverv}
@@ -137,22 +162,20 @@ Født: 5. desember 1984 & Sivil status: Ugift \\
 \item
 	\ressubheading{Bursdagsfesten på Ole-Johan Dahls hus 2. september}{Oslo}{Festgeneral/Koordinator}{2011}
 	\begin{itemize}
-		\resitem{Planla, gjennomførte og avsluttet etterarbeidet tilknyttet Bursdagsfesten i anledning Universitetet i Oslo 200-års jubileumsfeiring.}
+		\resitem{Planla, gjennomførte og avsluttet etterarbeidet tilknyttet Bursdagsfesten i anledning Universitetet i Oslos 200-års jubileumsfeiring.}
 		\resitem{Samarbeidet med Ifi og UiO:200, jubileumsekretariatet, og lagde fest for nesten 5 000 mennesker.}
 	\end{itemize}
 \item
-	\ressubheading{IAESTE Ås}{Ås}{Leder, økonomiansvalig, nestleder, dataansvarlig}{2003 august - 2007 juni}
+	\ressubheading{IAESTE}{Ås}{Dataansvarlig, leder, økonomiansvalig, nestleder}{2003 august - 2007 juni}
 \item
-	\ressubheading{IAESTE Norge}{Norge}{Dataansvarlig}{2005 - 2006}
-\item
-	\ressubheading{UKA i Ås 2004, 2006}{Ås}{Webansvarlig, Vertskap}{2004, 2006 oktober}
+	\ressubheading{UKA i Ås}{Ås}{Webansvarlig, Vertskap}{2004, 2006 oktober}
 \end{itemize}
 
-\resheading{Personlig}
+\resheading{Personlige detaljer}
 
 \begin{itemize}
-\item Er en ansvarsfull og åpen person som har glede av sosialt arbeid, liker å ta tak utfordringer og stor bruker av Ockhams barberkniv. Liker å jobbe med likesinnede, men har ikke problemer med å samarbeide med folk på tvers av interesser og livssyn.
-\item {\bf Hobbyer:} Lese, lære nye ting, bygge/lage ting (mye nostalgi i lego), spill (være det digitale, brettspill, kort eller rollespill), og være i sosialt lag med venner
+\item {\bf Hobbyer:} Lese, lære nye ting, bygge/lage nye ting (f.eks. i lego), brett-, kort- og rollespillx|
+\item Har førerkort klasse B
 \end{itemize}
 
 \resheading{Referanser}
